@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/goeuro_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.72"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/id_txtsource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_source"
+            android:layout_marginTop = "10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <AutoCompleteTextView
+            android:id="@+id/source_txtview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginTop = "10dp"
+            android:text="" >
+
+            <requestFocus />
+        </AutoCompleteTextView>
+
+        <TextView
+            android:id="@+id/id_txtdest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_dest"
+            android:layout_marginTop = "2dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <AutoCompleteTextView
+            android:id="@+id/dest_txtview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginTop = "10dp"
+            android:text="" />
+
+       <TextView
+            android:id="@+id/id_txtdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_date"
+            android:layout_marginTop = "30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+      
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="72dp"
+           android:layout_marginTop="10dp"
+           android:orientation="horizontal" >
+            
+	        <EditText
+	            android:id="@+id/id_date"
+	            android:layout_width="0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.72"
+	            android:ems="10"
+	            android:inputType="date" />
+
+	        <Button
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:onClick="showDatePickerDialog"
+	            android:text="@string/pick_date" />
+
+	    </LinearLayout>
+       
+        <Button
+            android:id="@+id/id_srchbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop = "35dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp" 
+            android:enabled="false"
+            android:text="@string/btn_search" />
+
+    </LinearLayout>
+
+</LinearLayout>
